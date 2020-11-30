@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/48a1acd159.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>todo's</h1>
+    <i class="fas fa-recycle" id="recycle"></i>
+    <input type="text" name="" id="search-todo" placeholder="Search Todo...">
+    <i class="fas fa-search"></i>
+    <div class="todo-container">
+        <form class="form">
+            <i class="fas fa-plus-square" id="add-to-list"></i>
+            <input type="text" name="user-text" id="user-input" placeholder="Todo" autocomplete="off">
+        </form>
+
+        <ul class="todo-list"></ul>
+    </div>
+
+    <div class="date">
+        <i class="fa fa-tims" aria-hidden="true" id="cancel">X</i>
+        <div>
+            <input type="time" min="9:00" max="18:00" id="alarm-time" class="alarm-time" step="1">
+            <p class="time">Set Alarm Time</p>
+            <button class="set-alarm">Set Alarm</button>
+            <button class="off-alarm">Off</button>
+        </div>
+    </div>
+    <audio src="./early-sunrise-517.mp3" class="alarm-audio"></audio>
+    <script src="./script.js"></script>
+</body>
+
+</html>
