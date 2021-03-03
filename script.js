@@ -28,7 +28,7 @@ addToList.addEventListener('click', () => {
 
 function urlify(text) {
   let urlRegex = /(https?:\/\/[^\s]+)/g;
-  let res = text.link(url);
+  let res = text.link(text);
   return text.replace(urlRegex, function(url) {
   return res;
 //'<html><body><a href="' + url + '">' + url + '</a></body></html>';
