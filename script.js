@@ -31,8 +31,8 @@ function urlify(text) {
   /*return text.replace(urlRegex, function(url) {
     return '<html><body><a href="' + url + '">' + url + '</a></body></html>';
   })*/
-  if(urlRegex == text) {
-   return text.link(text);
+  if(urlRegex === text) {
+   text = text.link(text);
   }
 }
 
