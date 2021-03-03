@@ -28,13 +28,10 @@ addToList.addEventListener('click', () => {
 
 function urlify(text) {
   var urlRegex = /(https?:\/\/[^\s]+)/g;
-  /*return text.replace(urlRegex, function(url) {
-    return '<html><body><a href="' + url + '">' + url + '</a></body></html>';
-  })*/
-  if(urlRegex === text) {
-   //text = text.link(text);
-    return text + Winay
-  }
+  return text.replace(urlRegex, function(url) {
+    return text.link(url);
+//'<html><body><a href="' + url + '">' + url + '</a></body></html>';
+  })
 }
 
 function createTodo(todoo) {
