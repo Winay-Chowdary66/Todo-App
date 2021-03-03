@@ -29,7 +29,7 @@ addToList.addEventListener('click', () => {
 function urlify(text) {
   var urlRegex = /(https?:\/\/[^\s]+)/g;
   return text.replace(urlRegex, function(url) {
-    return '<a href="' + url + '">' + url + '</a>';
+    return '<html><body><a href="' + url + '">' + url + '</a></body></html>';
   })
 }
 
