@@ -26,12 +26,20 @@ addToList.addEventListener('click', () => {
 	createTodo();
 });
 
+function urlify(text) {
+  var urlRegex = /(https?:\/\/[^\s]+)/g;
+  return text.replace(urlRegex, function(url) {
+    return '<a href="' + url + '">' + url + '</a>';
+  })
+}
+
 function createTodo(todoo) {
 	let inputValue = input.value;
 	if (todoo) {
 		inputValue = todoo.todo;
 	}
 	if (inputValue) {
+                inputValue = urlify(inputValue);
 		let createListEls = document.createElement('li');
 		let listAttr = document.createAttribute('class');
 		listAttr.value = 'list-els';
